@@ -1,0 +1,13 @@
+<div class="content"> Test DemoTest
+  <h1> button à cliquer</h1>
+  <article class="Message is-warning" [hidden]="hideContent">
+    <div class="message-header">
+      <p>niveau de danger {{severity}}</p>
+      <div class="message-body">
+        <p>message : {{content}}</p>
+      </div>
+    </div>
+  </article>
+
+  <button (click)="btnClick()" class="button is info"> click to visible or not</button>
+</div>
