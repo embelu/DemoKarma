@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
+import { AlertmessageService } from 'src/services/alertmessage.service';
 
 @Component({
   selector: 'app-alertmessage',
@@ -11,12 +13,17 @@ export class AlertmessageComponent implements OnInit {
   severity = 123;
   hideContent = true;
 
-  constructor() { }
+  constructor(private alertmessageService: AlertmessageService) { }
 
   ngOnInit(): void {
+    this.content = this.alertmessageService.getMessage();
   }
 
   btnClick() {
     this.hideContent = !this.hideContent;
+  }
+
+  btnClickAsync() {
+    timer(500).subscribe(() => { this.btnClick(); })
   }
 }

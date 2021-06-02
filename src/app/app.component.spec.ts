@@ -1,3 +1,4 @@
+/*
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
@@ -28,4 +29,4 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('DemoKarma app is running!');
   });
-});
+});*/
